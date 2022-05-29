@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     "username":"ivoSerra",
-    "password":"trueblue"
+    "password":""
     
 }
 
@@ -14,7 +14,7 @@ Content-Type: application/json
 
 {
     "username":"ivoSerra",
-    "password":"trueblue"
+    "password":"""
 }
 
 
