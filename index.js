@@ -27,8 +27,8 @@ app.use("/project", projectRouter)
 app.use(globalErrorHandler)
 
 
-const PORT = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 
-app.listen(PORT,()=>{
-    console.log("Up: http://localhost:" + PORT)
+app.listen(port,()=>{
+    console.log("Up: http://localhost:" + port)
 })
