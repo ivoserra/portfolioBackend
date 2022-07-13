@@ -16,6 +16,11 @@ app.use(cors())
 app.use(express.json())
 
 app.use(requestLogger)
+
+app.get("/", (req, res) => {
+    res.send("Hey is is new app");
+  });
+  
 app.use("/user", userRouter)
 app.use("/project", projectRouter)
 app.use(globalErrorHandler)
