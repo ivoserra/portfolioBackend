@@ -16,7 +16,6 @@ app.use(cors())
 app.use(express.json())
 
 app.use(requestLogger)
-
 app.get("/", (req, res) => {
     res.send("Hey is is new app");
   });
