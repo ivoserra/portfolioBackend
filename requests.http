@@ -2,8 +2,9 @@ POST http://localhost:8000/user/register
 Content-Type: application/json
 
 {
-    "username":"ivoSerra",
-    "password":""
+    "username":"IvoSerra",
+    "password":"azul",
+    "type":"admin"
     
 }
 
@@ -13,8 +14,9 @@ POST http://localhost:8000/user/login
 Content-Type: application/json
 
 {
-    "username":"ivoSerra",
-    "password":"""
+    "username":"ivo",
+    "password":"trueblue",
+    "type":"admin"
 }
 
 

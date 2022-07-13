@@ -51,10 +51,6 @@ projectRouter
         try{
             const payload = req.body
             const id = req.params.id
-            const user = await User.find(req.body.username)
-            // if(user.type !== "admin"){
-            //     res.status(401).send({confirm: false, message: "You are not authorized to edit projects"})
-            // }
             const project = await Project.findByIdAndUpdate(id)
             if(!project){
                 return res.status(400).send({confirm:false, message:'Project not found'})

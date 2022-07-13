@@ -6,6 +6,7 @@ import { body } from "express-validator"
 const updateValidator = [
 
     body('type')
+        .optional({checkFalsy: true})
         .notEmpty()
         .withMessage('Type of Project is required'),
 

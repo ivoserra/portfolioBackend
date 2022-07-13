@@ -1,7 +1,6 @@
 import { validationResult } from "express-validator";
 
 
-
  function requestValidator(projectValidator){
 
     const middleware =[...projectValidator]
