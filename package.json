@@ -1,15 +1,15 @@
 {
-  "type": "module",
+  "type":"module",
   "scripts":{
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./index.js",
-    "start": "node index.js"
+    "test":"echo \"Error: no test specified\" && exit 1",
+    "dev":"node ./index.js",
+    "start":"node index.js"
   },
   "engines":{
-    "node":"16.16.0"
+    "node":"^16.16.0"
   },
   "main":"index.js",
-  
+
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
