@@ -26,7 +26,7 @@ projectRouter
             }
             res.send({confirm:true, message: "Your database says Hello", project:project})
         }catch(error){
-            next(error)
+            res.status(400).send(error.message)
         }
     })
     .post("/",requestValidator(projectValidator), async(req,res)=>{
@@ -78,7 +78,7 @@ projectRouter
             
             res.status(200).send({confirm:true, message:"your project has been deleted"})
         }catch (error){
-            next(createError(400, error.message))
+            res.status(400).send(error.message)
         }
 
     })
