@@ -14,6 +14,7 @@ connect()
 
 app.use(cors())
 app.use(express.json())
+
 app.use(function(req, res, next){
 
   res.header('Access-Control-Allow-Origin', '*');
@@ -33,7 +34,7 @@ app.use(function(req, res, next){
 app.use(requestLogger)
 
 app.get("/", (req, res) => {
-    res.send("Hey is my new app");
+    res.send("Hey this is the web-dev portfolio APi by ivo serra");
   });
   
 app.use("/user", userRouter)
