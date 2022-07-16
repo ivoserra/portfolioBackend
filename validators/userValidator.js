@@ -7,17 +7,19 @@ body('username')
     .notEmpty()
     .withMessage('username is required')
     .bail()
-    .isAlphanumeric()
-    .withMessage('only letters or numbers are allowed'),
+    .matches(/^[a-zA-Z0-9äöüÄÖÜß\ ]*$/)
+    .withMessage('only letters and numbers are allowed'),
 
 body('password')
     .trim()
     .notEmpty()
     .withMessage('password is required')
-    .isAlphanumeric()
-    .withMessage('only letters or numbers are allowed')
+    .bail()
+    .matches(/^[a-zA-Z0-9äöüÄÖÜß\ ]*$/)
+    .withMessage('only letters and numbers are allowed. 4 - 8 characters long')
+    .bail()
     .isLength({min:4, max:8})
-    .withMessage('from 4 till 8 characters long. NO white spaces or special characters')
+    .withMessage('4 - 8 characters long. NO white spaces or special characters')
 
 
 ]
@@ -25,15 +27,16 @@ body('password')
 const userValidator=[
 body('username')
     .trim()
-    .matches(/^[a-zA-Z0-9äöüÄÖÜß\ ]*$/)
-    .withMessage('only letters and numbers are allowed'),
+    .notEmpty()
+    .withMessage('username is required'),
+    
+    
 
 body('password')
     .trim()
-    .matches(/^[a-zA-Z0-9äöüÄÖÜß\ ]*$/)
-    .withMessage('only letters and numbers are allowed')
-    .isLength({min:4, max:8})
-    .withMessage('from 4 till 8 characters long. No white spaces or special characters')
+    .notEmpty()
+    .withMessage('password is required')
+  
 
 ]
 
