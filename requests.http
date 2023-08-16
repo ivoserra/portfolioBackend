@@ -21,8 +21,6 @@ GET http://localhost:8000/project
 
 
 ###
-
-
 POST http://localhost:8000/project
 Content-Type:application/json
 

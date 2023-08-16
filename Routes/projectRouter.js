@@ -7,12 +7,13 @@ import projectValidator from '../validators/projectValidator.js'
 import updateValidator from '../validators/updateValidator.js'
 
 
+
 const projectRouter = express.Router()
 
-projectRouter   
-        
+projectRouter       
     .get("/", async(req,res, next)=>{
         const project = await Project.find()
+        console.log('project', project)
         res.status(200).send({confirm:true, message:"Your database says hello", project:project})
 
     })
