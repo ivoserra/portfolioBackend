@@ -33,6 +33,7 @@ app.use(function(req, res, next){
 
 }); 
 
+// from joel 
 //app.use(cors({ origin: "https://github.com/ivoserra/portfolioFullstack", credentials: true }))
 
 app.use(requestLogger)
